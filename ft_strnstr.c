@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 07:56:57 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/09 08:25:07 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/09 14:49:19 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (*(big + i) == *(little + i))
 		{
 			i++;
-			if (*(little + i) == '\0' && i < len)
+			if (*(little + i) == '\0' && i <= len)
 				return ((char *)big);
 		}
 		big++;

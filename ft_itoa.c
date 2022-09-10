@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 13:58:38 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/10 23:16:40 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 01:27:28 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 	int		isneg;
 
 	ptr = (char *)malloc (12 * sizeof (char));
-	if (ptr == NULL)
+	if (!ptr)
 		return (NULL);
 	if (n == 0)
 	{

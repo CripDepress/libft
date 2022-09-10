@@ -5,8 +5,10 @@ SRCS	=	ft_isalpha.c   ft_isdigit.c    ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_atoi.c      ft_calloc.c     ft_strdup.c \
 			ft_substr.c    ft_strjoin.c    ft_strtrim.c ft_split.c   ft_itoa.c    \
 			ft_strmapi.c   ft_striteri.c   ft_putchar_fd.c \
-			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 
+			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+BONS	=	ft_lstnew.c
 OBJS	=	$(SRCS:.c=.o)
+BOBJ	=	$(SRCS:.c=.o)
 
 CC		=	gcc
 RM		=	rm -f
@@ -19,15 +21,15 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
+bonus:		$(OBJS) $(BOBJ)
+				ar rcs $(NAME) $(OBJS) $(BOBJ)
+
 norm:
 				norminette libft.h $(SRCS)
 
 so:
 				$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
 				gcc -nostartfiles -shared -o libft.so $(OBJS)
-
-test:
-				make -C ../libft-unit-test
 
 clean:
 				$(RM) $(OBJS)
@@ -37,4 +39,4 @@ fclean:		clean
 
 re:			fclean $(NAME)
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus

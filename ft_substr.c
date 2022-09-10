@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 10:43:06 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/10 11:23:20 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/10 22:13:36 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
 
+	if (!s)
+		return (NULL);
 	if (!len)
 		return (NULL);
 	ptr = (char *)malloc ((len + 1) * sizeof (char));

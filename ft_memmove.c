@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 08:01:25 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/10 21:16:42 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/10 22:17:10 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (char *)dest;
 	s = (const char *)src;
-	if(s < d)
+	if (s < d)
 	{
 		while (n--)
 		{

@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 19:17:23 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/10 20:32:09 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/10 22:19:25 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_words(char const *s, char c)
 int	ft_wlen(char const *s, char c)
 {
 	int	n;
-	
+
 	n = 0;
-	while(*s != '\0' && *s != c)
+	while (*s != '\0' && *s != c)
 	{
 		s++;
 		n++;
@@ -49,7 +49,7 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		wl;
 
-	ptr = (char **)malloc (ft_words(s, c) * sizeof (char*));
+	ptr = (char **)malloc (ft_words(s, c) * sizeof (char *));
 	if (ptr == NULL)
 		return (NULL);
 	j = 0;

@@ -6,13 +6,15 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 18:56:45 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/10 19:01:16 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/10 23:21:05 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
+
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	
 }

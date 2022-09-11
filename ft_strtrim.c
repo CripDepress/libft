@@ -6,13 +6,13 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 11:58:43 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/11 16:41:33 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 22:02:58 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isin(char c, char const *set)
+int	ft_isin(char c, char const *set)
 {
 	while (*set)
 	{

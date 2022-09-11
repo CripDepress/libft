@@ -6,7 +6,7 @@
 /*   By: akeawdou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 11:39:17 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/11 17:03:58 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 22:01:14 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
 	first = NULL;
 	while (lst)
 	{
-		if (!(new = ft_lstnew((*f)(lst->content))))
+		new = ft_lstnew((*f)(lst->content));
+		if (!new)
 		{
 			while (first)
 			{
@@ -39,5 +40,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
 	}
 	return (first);
 }
-
-

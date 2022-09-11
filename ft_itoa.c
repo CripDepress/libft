@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 13:58:38 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/11 16:54:21 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 21:58:39 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_reverse(char *str, int n)
 	}
 }
 
-int		ft_abs(int n)
+int	ft_abs(int n)
 {
 	if (n < 0)
 		return (-1 * n);

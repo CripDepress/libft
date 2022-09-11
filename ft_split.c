@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 19:17:23 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/11 17:59:06 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 22:02:08 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static size_t	word_count(char const *s, char c)
 	return (count);
 }
 
-static char		*wordcpy(char const *s, char c)
+static char	*wordcpy(char const *s, char c)
 {
 	size_t	wl;
 	char	*temp;
@@ -54,7 +54,7 @@ static char		*wordcpy(char const *s, char c)
 	return (temp);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**ans;
 	size_t	wc;

@@ -52,4 +52,5 @@ Mkfile.old
 dkms.conf
 
 # External unit test tools
+/libftTester
 /libft-war-machine

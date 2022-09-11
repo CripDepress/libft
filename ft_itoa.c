@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 13:58:38 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/11 13:22:11 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 16:54:21 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,18 @@ void	ft_reverse(char *str, int n)
 	}
 }
 
-int	ft_abs(int n)
+int		ft_abs(int n)
 {
 	if (n < 0)
 		return (-1 * n);
 	return (n);
+}
+
+char	*ft_getz(char *ptr)
+{
+	ptr[0] = '0';
+	ptr[1] = '\0';
+	return (ptr);
 }
 
 char	*ft_itoa(int n)
@@ -47,11 +54,7 @@ char	*ft_itoa(int n)
 	if (!ptr)
 		return (NULL);
 	if (n == 0)
-	{
-		ptr[0] = '0';
-		ptr[1] = '\0';
-		return (ptr);
-	}
+		return (ft_getz(ptr));
 	isneg = 0;
 	if (n < 0)
 		isneg = 1;

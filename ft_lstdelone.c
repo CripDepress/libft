@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
+/*   By: akeawdou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/10 18:56:45 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/11 14:44:51 by akeawdou         ###   ########.fr       */
+/*   Created: 2022/09/11 10:07:12 by akeawdou          #+#    #+#             */
+/*   Updated: 2022/09/11 10:26:11 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (n == -2147483648)
+	if (lst != NULL && del != NULL)
 	{
-		ft_putstr_fd("-2147483648", fd);
-		return ;
+		if (lst->content != NULL)
+			(*del)(lst->content);
+		free(lst);
 	}
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n = n * -1;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-	}
-	ft_putchar_fd((n % 10) + '0', fd);
 }

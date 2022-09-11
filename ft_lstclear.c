@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
+/*   By: akeawdou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/10 18:56:45 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/11 14:44:51 by akeawdou         ###   ########.fr       */
+/*   Created: 2022/09/11 10:26:40 by akeawdou          #+#    #+#             */
+/*   Updated: 2022/09/11 11:32:06 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstclear(t_list ** lst, void (*del)(void*))
 {
-	if (n == -2147483648)
-	{
-		ft_putstr_fd("-2147483648", fd);
+	t_list	*tmp;
+
+	if (!del || !lst || !*lst)
 		return ;
-	}
-	if (n < 0)
+	while (lst && *lst)
 	{
-		ft_putchar_fd('-', fd);
-		n = n * -1;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
-	if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-	}
-	ft_putchar_fd((n % 10) + '0', fd);
 }

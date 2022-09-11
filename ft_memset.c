@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 15:06:51 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/07 18:56:32 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 13:14:58 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
-	char	*p;	
+	char	*p;
 
-	p = (char *) s;
+	p = (char *)s;
 	i = 0;
 	while (i < n)
 	{

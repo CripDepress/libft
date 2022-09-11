@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 17:21:11 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/10 22:12:55 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 13:20:34 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (s == NULL)
 		return (NULL);
 	n = ft_strlen(s);
-	ptr = (char *)malloc ((n + 1) * sizeof (char));
+	ptr = (char *)malloc((n + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;

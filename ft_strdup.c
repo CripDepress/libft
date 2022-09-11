@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:14:16 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/09 15:23:57 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 13:15:26 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	char	*ptr;
 
 	n = ft_strlen(s);
-	ptr = malloc(n * sizeof (char) + 1);
+	ptr = malloc(n * sizeof(char) + 1);
 	if (ptr == NULL)
 		return (ptr);
 	while (n >= 0)

@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
+/*   By: akeawdou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 07:31:36 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/11 07:19:32 by akeawdou         ###   ########.fr       */
+/*   Created: 2022/09/11 09:32:51 by akeawdou          #+#    #+#             */
+/*   Updated: 2022/09/11 09:35:13 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	char	*p;
-	char	*a;
-
-	p = (char *)s;
-	a = NULL;
-	while (*p != '\0')
-	{
-		if (*p == (char)c)
-			a = p;
-		p++;
-	}
-	if (c == '\0')
-		return (p);
-	if (a == NULL)
-		return (NULL);
-	return (a);
+	while (lst != NULL && lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 07:05:00 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/08 07:27:48 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 07:19:07 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	p = (char *)s;
 	while (*p != '\0')
 	{
-		if (*p == c)
+		if (*p == (char)c)
 			return (p);
 		p++;
 	}

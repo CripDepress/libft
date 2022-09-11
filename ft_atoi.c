@@ -6,7 +6,7 @@
 /*   By: akeawdou <akeawdou@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 08:30:05 by akeawdou          #+#    #+#             */
-/*   Updated: 2022/09/09 14:53:12 by akeawdou         ###   ########.fr       */
+/*   Updated: 2022/09/11 07:47:37 by akeawdou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_atoi(const char *nptr)
 	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == 32)
 		nptr++;
 	sign = 1;
-	while (*nptr == '+' || *nptr == '-')
+	if (*nptr == '-' || *nptr == '+')
 	{
 		if (*nptr == '-')
 			sign = -1;
